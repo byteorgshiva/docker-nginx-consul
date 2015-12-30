@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install unzip -y && \
 
 EXPOSE 8080 9995 9996
 VOLUME /templates
-
+ADD service.consul /templates/service.consul
 CMD ["/bin/start.sh"]
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
